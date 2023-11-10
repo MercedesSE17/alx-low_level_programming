@@ -49,9 +49,19 @@ int main()
         {"s", print_str},
         {NULL, NULL}
     };
+int i;
 
+    /* Example usage of print_all with a format string and arguments */
     print_all("cifs", 'H', 42, 3.14, "Hello, World!");
+
+    /* Using format_map in some way to avoid the unused variable warning */
+
+	for (i = 0; format_map[i].c != NULL; i++) {
+        /* Do something with format_map[i], e.g., print its contents */
+        printf("Format: %s\n", format_map[i].c);
+    }
 
     return 0;
 }
+
 
